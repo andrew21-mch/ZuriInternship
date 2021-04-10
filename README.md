@@ -1,2 +1,8 @@
 **Description of Repo**
-this repository has to do with all my work while on the 4months with ingressive for tech internship
+
+**Basic Authenticationwith php**
+*the repository decribes basic tasks in php*
+1--Basic Calculator
+2--Simple user registration using files
+3--Simple login using stored data in files
+4--Simple session syntax
