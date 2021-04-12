@@ -35,6 +35,6 @@ if(isset($_POST["user"]) && isset($_POST["pass"]))
 }
 else
 {
-    include 'reg.html';
+    include 'registration.html';
 }
 ?>
