@@ -7,8 +7,8 @@
     <body>
         <form>
             <?php
-        require_once "config.includes.php";
-        require_once "course_registration.includes.php";
+        require_once "includes/config.includes.php";
+        require_once "includes/course_registration.includes.php";
         $sql  = "SELECT * FROM Course";
         $results = mysqli_query($conn, $sql); 
             
