@@ -17,7 +17,7 @@ if(isset($_POST['reset'])){
         }
         else{
             echo "<script>alert('Success')</script>";
-            header('location: ../home.php');
+            header('location: ../crud/home.php');
         }
         
     }

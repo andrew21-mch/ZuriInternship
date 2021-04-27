@@ -18,16 +18,18 @@ if (isset($_POST['login'])) {
 
   // if no error in form, log user in
   if (count($errors) == 0) {
-    $pass = password_hash($password, PASSWORD_DEFAULT);
-    $sql = "SELECT * FROM UserInfo WHERE Username='$username' OR Email ='$username' AND UserPass='$pass';";
+    $passhashed = password_hash($password, PASSWORD_DEFAULT);
+    $sql = "SELECT * FROM UserInfo WHERE Username= '$username' OR Email = '$username' AND UserPass='$passhashed';";
     $results = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($results)==1) {
       $_SESSION['uname'] = $username;
       //$_SESSION['success'] = "You are now logged in";
-      header('location: ../home.php');
+      header('location: ../crud/home.php');
+      echo "<script>alert('Success')</script>";
     }else {
       array_push($errors, "Wrong credentials");
+      echo "<script>alert('Something Went Wrong')</script>";
     }
   }
 }

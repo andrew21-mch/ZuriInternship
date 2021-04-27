@@ -82,7 +82,7 @@ function userExist($conn, $username, $email){
 //Function to create user
 function createUser($conn, $name, $username, $email, $pass1){
 
-    $sql = "INSERT INTO  UserInfo(FName, Username, Email, UserPass ) Values (?, ?, ?, ?)";
+    $sql = "INSERT INTO `UserInfo` (`FName`, `Username`, `Email`, `UserPass`) VALUES ( ?, ?, ?, ?)" ;
     $stmt = mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt, $sql)){

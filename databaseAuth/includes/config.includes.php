@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$dbname = "ZuriInterns";
+$dbname = "ZuriTest";
 
 $conn = mysqli_connect($host, $user, $password, $dbname);
 if (!$conn) {
